@@ -3,31 +3,57 @@ import MainLayout from '../layouts/MainLayout.astro';
 ---
 
 <MainLayout title="Home">
-  <section class="hero">
-    <img src="/images/minister.jpg" alt="Minister Name" class="hero-image" />
-    <h1>Welcome to the Ministry of [Minister Name]</h1>
+  <section class="hero bg-primary-100 rounded-lg overflow-hidden shadow-lg mb-12">
+    <div class="relative">
+      <img src="/images/minister.jpg" alt="Minister Name" class="w-full object-cover h-96" />
+      <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+      <div class="absolute bottom-0 p-6">
+        <h1 class="text-4xl font-bold text-white mb-2">Welcome to the Ministry of [Minister Name]</h1>
+      </div>
+    </div>
   </section>
-  <section class="description">
-    <h2>About [Minister Name]</h2>
-    <p>
-      [Minister Name] is dedicated to spreading the message of faith and hope. With years of service, she has touched many lives through her teachings and community work.
-    </p>
+  
+  <section class="description mb-12">
+    <h2 class="text-3xl font-bold text-primary-700 mb-4">About [Minister Name]</h2>
+    <div class="bg-white p-6 rounded-lg shadow-md">
+      <p class="text-secondary-600 leading-relaxed">
+        [Minister Name] is dedicated to spreading the message of faith and hope. With years of service, she has touched many lives through her teachings and community work.
+      </p>
+    </div>
   </section>
-  <section class="events">
-    <h2>Upcoming Events</h2>
-    <ul>
-      <li><strong>Event 1</strong> - Date: [Date], Location: [Location]</li>
-      <li><strong>Event 2</strong> - Date: [Date], Location: [Location]</li>
-      <li><strong>Event 3</strong> - Date: [Date], Location: [Location]</li>
-    </ul>
+  
+  <section class="events mb-12">
+    <h2 class="text-3xl font-bold text-primary-700 mb-6">Upcoming Events</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+        <h3 class="font-bold text-lg text-secondary-800 mb-2">Event 1</h3>
+        <p class="text-secondary-500">Date: [Date]</p>
+        <p class="text-secondary-500">Location: [Location]</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+        <h3 class="font-bold text-lg text-secondary-800 mb-2">Event 2</h3>
+        <p class="text-secondary-500">Date: [Date]</p>
+        <p class="text-secondary-500">Location: [Location]</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+        <h3 class="font-bold text-lg text-secondary-800 mb-2">Event 3</h3>
+        <p class="text-secondary-500">Date: [Date]</p>
+        <p class="text-secondary-500">Location: [Location]</p>
+      </div>
+    </div>
   </section>
+  
   <section class="reviews">
-    <h2>What People Say</h2>
-    <blockquote>
-      <p>"[Minister Name] changed my life with her inspiring words!" - [Name]</p>
-    </blockquote>
-    <blockquote>
-      <p>"Her ministry is a beacon of light in our community." - [Name]</p>
-    </blockquote>
+    <h2 class="text-3xl font-bold text-primary-700 mb-6">What People Say</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <blockquote class="bg-white p-6 rounded-lg shadow-md italic border-l-4 border-primary-500">
+        <p class="text-secondary-600 mb-2">"[Minister Name] changed my life with her inspiring words!"</p>
+        <cite class="text-secondary-800 font-bold">- [Name]</cite>
+      </blockquote>
+      <blockquote class="bg-white p-6 rounded-lg shadow-md italic border-l-4 border-primary-500">
+        <p class="text-secondary-600 mb-2">"Her ministry is a beacon of light in our community."</p>
+        <cite class="text-secondary-800 font-bold">- [Name]</cite>
+      </blockquote>
+    </div>
   </section>
 </MainLayout>
